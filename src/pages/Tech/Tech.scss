@@ -1,0 +1,550 @@
+@import '/src/App.scss';
+
+.tech-home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+
+  max-width: 1366px;
+  margin: 25px auto;
+  padding: 0 50px;
+  @include tablet {
+    max-width: 1024px;
+    padding: 0 40px;
+  }
+  @include mobile {
+    max-width: 738px;
+    padding: 0 20px;
+    margin: 10px auto;
+  }
+
+  .tech-home-featured-post {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+
+    height: 350px;
+    width: 100%;
+
+    transition: all 0.3s ease;
+    background-color: rgba(154, 154, 154, 0.134);
+    backdrop-filter: blur(20px);
+
+    &:hover {
+      text-decoration: underline;
+      color: orchid;
+    }
+
+    @include tablet {
+      height: 250px;
+      width: 100%;
+    }
+    @include mobile {
+      height: 300px;
+      width: 100%;
+      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    img {
+      height: 100%;
+      width: 60%;
+
+      @include tablet {
+        width: 60%;
+      }
+      @include mobile {
+        height: 60%;
+        width: 100%;
+      }
+    }
+    h1 {
+      height: 350px;
+      width: 40%;
+      font-size: 35px;
+      padding: 25px 5px 5px 15px;
+
+      @include tablet {
+        font-size: 25px;
+      }
+
+      @include mobile {
+        font-size: 20px;
+        height: 40%;
+        width: 100%;
+        padding: 5px;
+      }
+    }
+  }
+
+  .tech-home-recent-post {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin: 10px 0px;
+    padding: 0px;
+    width: 100%;
+    line-height: 25px;
+
+    @include tablet {
+      line-height: 25px;
+    }
+    @include mobile {
+      line-height: 18px;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    .tech-card {
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      height: 310px;
+      width: 260px;
+      margin: 5px 15px 10px 0px;
+      background-color: rgba(154, 154, 154, 0.134);
+      backdrop-filter: blur(20px);
+      transition: all 0.3s ease;
+
+      &:hover {
+        text-decoration: underline;
+        color: orchid;
+      }
+
+      @include tablet {
+        height: 300px;
+        width: 210px;
+        margin: 5px 15px 10px 0px;
+
+        &:active {
+          text-decoration: underline;
+          color: orchid;
+        }
+      }
+
+      @include mobile {
+        flex-direction: row;
+        height: 130px;
+        width: 100%;
+        display: flex;
+        margin: 10px 0px;
+
+        &:active {
+          text-decoration: underline;
+          color: orchid;
+        }
+      }
+
+      h2 {
+        font-weight: 200;
+        padding: 5px;
+        font-size: 20px;
+
+        @include tablet {
+          font-size: 19px;
+        }
+        @include mobile {
+          font-size: 16px;
+          width: 50%;
+          padding-left: 10px;
+          line-height: 20px;
+        }
+      }
+
+      img {
+        height: 150px;
+        width: 100%;
+
+        @include tablet {
+          height: 140px;
+          width: 100%;
+        }
+        @include mobile {
+          height: 100%;
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+// styles for the tech blog page
+//------------------------------
+
+.tech-container {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  line-height: 35px;
+
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 0px 200px;
+  @include tablet {
+    max-width: 1024px;
+    padding: 0 40px;
+    line-height: 30px;
+  }
+  @include mobile {
+    max-width: 738px;
+    padding: 20px 20px;
+    line-height: 30px;
+  }
+
+  .tech-container-post {
+    .tech-heading {
+      display: flex;
+      flex-direction: column;
+      margin-top: 30px;
+
+      @include mobile {
+        margin-top: 10px;
+      }
+
+      h1 {
+        line-height: 50px;
+        font-size: 50px;
+        font-weight: 100;
+
+        @include desktop {
+          font-size: 40px;
+        }
+
+        @include mobile {
+          font-size: 35px;
+        }
+      }
+      P {
+        font-size: 20px;
+        padding-top: 10px;
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+    }
+
+    //--------img
+    .tech-heading-img {
+      position: relative;
+      margin: 5px 0px;
+
+      height: 550px;
+      width: 100%;
+      backdrop-filter: blur(20px);
+      background-color: rgba(128, 128, 128, 0.167);
+      overflow: hidden;
+
+      @include tablet {
+        height: 550px;
+      }
+
+      @include mobile {
+        height: 300px;
+      }
+
+      img {
+        height: 500px;
+        width: 100%;
+        object-position: center;
+        @include tablet {
+          height: 500px;
+          width: 100%;
+        }
+        @include mobile {
+          height: 240px;
+          width: 100%;
+        }
+      }
+      .tech-media-credit {
+        height: 10px;
+        font-size: 14px;
+        line-height: normal;
+        padding: 2px 2px 2px 10px;
+      }
+    }
+    //-------video
+    .tech-heading-vid {
+      position: relative;
+      margin: 5px 0px;
+
+      height: 550px;
+      width: 100%;
+      backdrop-filter: blur(20px);
+      background-color: rgba(128, 128, 128, 0.167);
+      overflow: hidden;
+
+      @include tablet {
+        height: 550px;
+      }
+
+      @include mobile {
+        max-height: 360px;
+      }
+      video {
+        height: 500px;
+        width: 100%;
+        object-position: center;
+        @include tablet {
+          height: 500px;
+          width: 100%;
+        }
+        @include mobile {
+          height: 300px;
+          width: 100%;
+        }
+      }
+      .tech-media-credit {
+        height: 40px;
+        font-size: 14px;
+        line-height: normal;
+        padding: 2px 2px 2px 10px;
+      }
+    }
+
+    .tech-info {
+      display: flex;
+      flex-direction: column;
+      padding: 10px 0px;
+      margin: 0px;
+
+      P {
+        font-size: 20px;
+
+        @include mobile {
+          font-size: 18px;
+        }
+      }
+      .tech-info-img {
+        position: relative;
+        margin: 5px 0px;
+
+        height: 550px;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        background-color: rgba(128, 128, 128, 0.167);
+        overflow: hidden;
+
+        @include tablet {
+          height: 550px;
+        }
+
+        @include mobile {
+          height: 300px;
+        }
+
+        img {
+          max-height: 500px;
+          width: 100%;
+          object-position: center;
+          @include tablet {
+            height: 500px;
+            width: 100%;
+          }
+          @include mobile {
+            height: 240px;
+            width: 100%;
+          }
+        }
+        .tech-media-credit {
+          height: 10px;
+          font-size: 14px;
+          line-height: normal;
+          padding: 2px 2px 2px 10px;
+        }
+      }
+
+      .tech-info-vid {
+        position: relative;
+        margin: 5px 0px;
+
+        height: 550px;
+        width: 100%;
+        backdrop-filter: blur(20px);
+        background-color: rgba(128, 128, 128, 0.167);
+        overflow: hidden;
+
+        @include tablet {
+          height: 550px;
+        }
+
+        @include mobile {
+          height: 300px;
+        }
+
+        video {
+          max-height: 500px;
+          width: 100%;
+          object-position: center;
+          @include tablet {
+            height: 500px;
+            width: 100%;
+          }
+          @include mobile {
+            height: 240px;
+            width: 100%;
+          }
+        }
+        .tech-media-credit {
+          height: 10px;
+          font-size: 14px;
+          line-height: normal;
+          padding: 2px 2px 2px 10px;
+        }
+      }
+    }
+
+    .tech-latest {
+      margin-top: 40px;
+      font-size: 30px;
+      @include mobile {
+        font-size: 25px;
+      }
+
+      hr {
+        color: red;
+        margin: 10px 80px;
+
+        @include mobile {
+          margin: 10px 20px;
+        }
+      }
+    }
+    //more section
+    .tech-more {
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      margin: 10px 0px;
+      padding: 0px;
+      width: 100%;
+      line-height: 30px;
+
+      @include tablet {
+        line-height: 30px;
+      }
+      @include mobile {
+        line-height: 20px;
+        flex-direction: column;
+      }
+
+      .tech-card {
+        //from tech-card component
+        background-color: rgba(154, 154, 154, 0.134);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+
+        height: 310px;
+        width: 260px;
+        margin: 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          text-decoration: underline;
+          color: orchid;
+        }
+
+        @include tablet {
+          height: 300px;
+          width: 210px;
+          margin: 5px;
+
+          &:active {
+            text-decoration: underline;
+            color: orchid;
+          }
+        }
+
+        @include mobile {
+          flex-direction: row;
+          height: 130px;
+          width: 100%;
+          display: flex;
+          margin: 5px;
+
+          &:active {
+            text-decoration: underline;
+            color: orchid;
+          }
+        }
+
+        h2 {
+          font-weight: 200;
+          padding: 5px;
+          font-size: 20px;
+
+          @include tablet {
+            font-size: 19px;
+            line-height: 25px;
+          }
+          @include mobile {
+            font-size: 16px;
+            width: 50%;
+            padding-left: 10px;
+            line-height: 20px;
+          }
+        }
+
+        img {
+          height: 150px;
+          width: 100%;
+          @include tablet {
+            height: 140px;
+            width: 100%;
+          }
+          @include mobile {
+            height: 100%;
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+
+    line-height: normal;
+    padding: 20px 0px 5px 0px;
+
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+
+      @include mobile {
+        width: 30px;
+        height: 30px;
+      }
+    }
+
+    // Styling for the author name
+    .author-name {
+      font-size: 14px;
+      padding: 5px;
+
+      @include mobile {
+        font-size: 12px;
+      }
+    }
+
+    // Styling for the published date
+  }
+  .publish-date {
+    font-size: 15px;
+    @include mobile {
+      font-size: 13px;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import '/src/App.scss';
+
+.contact-container {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  overflow: hidden;
+  margin: 50px 10px;
+
+  .contact-form-container {
+    display: flex;
+    flex-direction: column;
+
+    .contact-form {
+      text-align: center;
+
+      h2 {
+        padding: 10px;
+        font-size: 30px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+          background-color: rgba(142, 225, 252, 0.245);
+          font-size: 20px;
+          color: inherit;
+          margin: 10px 0px;
+          border: none;
+          outline: none;
+          text-decoration: none;
+          border-radius: 10px;
+          padding: 10px 20px;
+
+          @include mobile {
+            padding: 5px 20px;
+            font-size: 15px;
+          }
+
+          &:focus {
+            background-color: rgba(90, 181, 255, 0.498);
+          }
+        }
+      }
+
+      textarea {
+        background-color: rgba(142, 227, 255, 0.245);
+        color: inherit;
+        border: none;
+        resize: none;
+        outline: none;
+
+        font-size: 20px;
+        padding: 10px 20px;
+        border-radius: 10px;
+        height: 150px;
+        &:focus {
+          background-color: rgba(152, 199, 237, 0.498);
+        }
+
+        @include mobile {
+          height: 120px;
+          font-size: 15px;
+        }
+      }
+      button {
+        color: inherit;
+        border: none;
+        background-color: rgba(0, 255, 60, 0.039);
+        margin: 10px 0px;
+        padding: 10px 0px;
+        border-radius: 10px;
+        font-size: 25px;
+        background-color: rgba(0, 255, 153, 0.296);
+
+        @include mobile {
+          margin: 15px 0px;
+          padding: 5px 0px;
+          border-radius: 10px;
+          font-size: 18px;
+        }
+
+        &:active {
+          background-color: gray;
+        }
+      }
+    }
+  }
+}

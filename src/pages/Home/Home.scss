@@ -1,0 +1,790 @@
+@import '/src/App.scss';
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  height: 100%;
+  width: 100%;
+
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 50px;
+  @include tablet {
+    max-width: 1024px;
+    padding: 0 30px;
+  }
+  @include mobile {
+    max-width: 738px;
+    padding: 0 20px;
+  }
+
+  .featured-post-home-container {
+    overflow: hidden;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+
+    height: 550px;
+    width: 100%;
+
+    @include tablet {
+      height: 380px;
+    }
+    @include mobile {
+      flex-direction: column;
+      height: 535px;
+    }
+
+    .featured-post-home-one-container {
+      width: 70%;
+      height: 100%;
+      overflow: hidden;
+
+      @include tablet {
+        width: 50%;
+      }
+
+      @include mobile {
+        width: 100%;
+        height: 220px;
+      }
+
+      &:hover {
+        .featured-post-home-one-items {
+          backdrop-filter: blur(15px);
+        }
+      }
+
+      .featured-post-home-one {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+
+        .featured-post-home-one-items {
+          overflow: hidden;
+          margin: 300px 40px 5px 40px;
+          padding: 5px;
+          border-radius: 12px;
+
+          background-color: rgba(246, 246, 246, 0.491);
+          transition: backdrop-filter 0.5s ease;
+          @include tablet {
+            backdrop-filter: blur(1.5px);
+
+            width: 90%;
+            height: auto;
+            margin: 150px 10px 15px 10px;
+          }
+          @include mobile {
+            backdrop-filter: blur(1.5px);
+
+            width: 90%;
+            height: auto;
+            margin: 60px 5px 5px 5px;
+            border-radius: 5px;
+          }
+
+          h1 {
+            color: white;
+            font-size: 30px;
+            font-weight: 900;
+
+            @include tablet {
+              font-size: 20px;
+              font-weight: 100;
+            }
+            @include mobile {
+              font-size: 18px;
+            }
+          }
+          hr {
+            color: red;
+            margin: 10px 0px;
+
+            @include mobile {
+              margin: 5px 0px;
+            }
+          }
+          p {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 1.5em;
+
+            @include tablet {
+              line-height: 1.2;
+              font-size: 16px;
+              font-weight: 200;
+            }
+            @include mobile {
+              line-height: normal;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+    .featured-post-home-recent-container {
+      width: 30%;
+      margin: 0px 5px 5px 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      @include tablet {
+        gap: 8px;
+        width: 50%;
+      }
+      @include mobile {
+        width: 100%;
+        margin: 5px 0px 0px 0px;
+      }
+
+      .top-stories {
+        text-align: center;
+        font-size: 25px;
+        margin: 10px 0px;
+
+        @include tablet {
+          font-size: 20px;
+          margin: 2px 0px;
+        }
+        @include mobile {
+          font-size: 18px;
+          margin: 2px 0px;
+        }
+      }
+      hr {
+        opacity: 0.5;
+      }
+
+      .featured-post-home-recent {
+        display: flex;
+        flex-direction: row;
+        margin: 2px 0px;
+
+        .featured-post-home-recent-data {
+          overflow: hidden;
+          display: flex;
+          flex-direction: row;
+          transition: all 0.3s ease;
+          height: auto;
+
+          h1 {
+            font-size: 25px;
+            padding: 0px 5px;
+            @include mobile {
+              font-size: 18px;
+              padding: 0px 3px;
+            }
+          }
+
+          img {
+            height: 50px;
+            width: 50px;
+            @include mobile {
+              height: 30px;
+              width: 50px;
+            }
+          }
+          p {
+            font-size: 16px;
+            margin: 2px 2px 0px 6px;
+            width: 80%;
+            @include tablet {
+              font-size: 14px;
+            }
+            @include mobile {
+              font-size: 14px;
+              margin: 0px 2px 0px 4px;
+            }
+          }
+
+          &:hover {
+            text-decoration: underline;
+            color: orchid;
+          }
+          &:active {
+            color: orchid;
+          }
+        }
+      }
+    }
+  }
+
+  .sections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 20px;
+
+    .tech-home-card {
+      margin-bottom: 10px;
+      .tech-card-links {
+        height: 70px;
+        width: 100%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include mobile {
+          height: 50px;
+          display: flex;
+          flex-direction: column;
+
+          align-items: flex-start;
+        }
+
+        .tech-link-title {
+          display: inline;
+          font-size: 25px;
+          margin-bottom: 5px;
+          transition: all 0.3s ease;
+
+          @include mobile {
+            font-size: 20px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 20px;
+            padding: 0px 0px;
+            @include mobile {
+              font-size: 18px;
+            }
+          }
+          hr {
+            width: 150px; //unique
+            @include mobile {
+              width: 120px;
+            }
+          }
+
+          &:active {
+            color: orchid;
+          }
+          &:hover {
+            color: orchid;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-bottom: 5px;
+          font-weight: 100;
+          padding: 5px;
+
+          &:hover span {
+            transform: translateX(20px);
+          }
+
+          span {
+            vertical-align: middle;
+            font-weight: 900;
+            transition: all 0.5s ease-in-out;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+
+      .tech-home-more {
+        margin: 0px 0px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 330px;
+
+        @include tablet {
+          height: 240px;
+        }
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+
+          height: 600px;
+        }
+
+        .tech-card {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          height: 320px;
+          width: 280px;
+          margin: 0px 15px 0px 0px;
+          background-color: rgba(154, 154, 154, 0.134);
+          backdrop-filter: blur(20px);
+          transition: all 0.3s ease;
+
+          @include tablet {
+            margin: 0px 12px 0px 0px;
+            width: 165px;
+            height: 230px;
+          }
+
+          @include mobile {
+            flex-direction: row;
+            height: 140px;
+            width: 100%;
+            display: flex;
+            margin: 0px 0px 5px 0px;
+            &:active {
+              text-decoration: underline;
+              color: orchid;
+            }
+          }
+
+          h2 {
+            text-align: left;
+            padding: 0px 5px;
+            height: 40%;
+            width: 100%;
+
+            font-size: 20px;
+
+            @include tablet {
+              font-size: 16px;
+              padding: 0px 1px;
+            }
+            @include mobile {
+              height: 100%;
+              width: 50%;
+              padding: 3px 5px;
+              font-size: 16px;
+            }
+          }
+
+          img {
+            height: 60%;
+            width: 100%;
+
+            @include tablet {
+              height: 40%;
+            }
+            @include mobile {
+              height: 100%;
+              width: 50%;
+            }
+          }
+
+          &:hover {
+            text-decoration: underline;
+            color: orchid;
+          }
+          &:active {
+            color: orchid;
+          }
+        }
+
+        .tech-view-more-mobile {
+          display: none;
+          @include mobile {
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+            h2 {
+              font-size: 16px;
+              margin-bottom: 5px;
+              font-weight: 100;
+              padding: 0 10px;
+
+              &:active {
+                text-decoration: underline;
+              }
+              span {
+                font-size: 1em;
+                vertical-align: middle;
+                font-weight: 900;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .space-home-card {
+      margin-bottom: 10px;
+      .space-card-links {
+        height: 70px;
+        width: 100%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include mobile {
+          height: 50px;
+          display: flex;
+          flex-direction: column;
+
+          align-items: flex-start;
+        }
+
+        .space-link-title {
+          display: inline;
+          font-size: 25px;
+          margin-bottom: 5px;
+          transition: all 0.3s ease;
+
+          @include mobile {
+            font-size: 20px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 20px;
+            padding: 0px 0px;
+            @include mobile {
+              font-size: 18px;
+            }
+          }
+          hr {
+            width: 175px; //unique
+            @include mobile {
+              width: 140px;
+            }
+          }
+
+          &:active {
+            color: orchid;
+          }
+          &:hover {
+            color: orchid;
+          }
+        }
+        h2 {
+          font-size: 20px;
+          margin-bottom: 5px;
+          font-weight: 100;
+          padding: 5px;
+
+          &:hover span {
+            transform: translateX(20px);
+          }
+
+          span {
+            vertical-align: middle;
+            font-weight: 900;
+            transition: all 0.5s ease-in-out;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+
+      .space-home-more {
+        margin: 0px 0px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 330px;
+
+        @include tablet {
+          height: 240px;
+        }
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+
+          height: 600px;
+        }
+
+        .space-card {
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          height: 320px;
+          width: 280px;
+          margin: 0px 15px 0px 0px;
+          background-color: rgba(154, 154, 154, 0.134);
+          backdrop-filter: blur(20px);
+          transition: all 0.3s ease;
+
+          @include tablet {
+            margin: 0px 12px 0px 0px;
+            width: 165px;
+            height: 230px;
+          }
+          @include mobile {
+            flex-direction: row;
+            height: 140px;
+            width: 100%;
+            display: flex;
+            margin: 0px 0px 5px 0px;
+            &:active {
+              text-decoration: underline;
+              color: orchid;
+            }
+          }
+
+          h2 {
+            text-align: left;
+            padding: 0px 5px;
+            height: 40%;
+            width: 100%;
+
+            font-size: 20px;
+            @include tablet {
+              font-size: 16px;
+              padding: 0px 1px;
+            }
+            @include mobile {
+              height: 100%;
+              width: 50%;
+              padding: 3px 5px;
+              font-size: 16px;
+            }
+          }
+
+          img {
+            height: 60%;
+            width: 100%;
+
+            @include tablet {
+              height: 40%;
+            }
+            @include mobile {
+              height: 100%;
+              width: 50%;
+            }
+          }
+
+          &:hover {
+            text-decoration: underline;
+            color: orchid;
+          }
+          &:active {
+            color: orchid;
+          }
+        }
+        .space-view-more-mobile {
+          display: none;
+          @include mobile {
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+            h2 {
+              font-size: 16px;
+              margin-bottom: 5px;
+              font-weight: 100;
+              padding: 0 10px;
+
+              &:active {
+                text-decoration: underline;
+              }
+              span {
+                font-size: 1em;
+                vertical-align: middle;
+                font-weight: 900;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .beyond-home-card {
+      margin-bottom: 10px;
+      .beyond-card-links {
+        height: 70px;
+        width: 100%;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        @include mobile {
+          height: 50px;
+          display: flex;
+          flex-direction: column;
+
+          align-items: flex-start;
+        }
+
+        .beyond-link-title {
+          display: inline;
+          font-size: 25px;
+          margin-bottom: 5px;
+          transition: all 0.3s ease;
+
+          @include mobile {
+            font-size: 20px;
+            margin-bottom: 0px;
+          }
+          p {
+            font-size: 20px;
+            padding: 0px 0px;
+            @include mobile {
+              font-size: 18px;
+            }
+          }
+          hr {
+            width: 210px; //unique
+            @include mobile {
+              width: 170px;
+            }
+          }
+
+          &:active {
+            color: orchid;
+          }
+          &:hover {
+            color: orchid;
+          }
+        }
+
+        h2 {
+          font-size: 20px;
+          margin-bottom: 5px;
+          font-weight: 100;
+          padding: 5px;
+
+          &:hover span {
+            transform: translateX(20px);
+          }
+
+          span {
+            vertical-align: middle;
+            font-weight: 900;
+            transition: all 0.5s ease-in-out;
+          }
+
+          @include mobile {
+            display: none;
+          }
+        }
+      }
+
+      .beyond-home-more {
+        margin: 0px 0px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 330px;
+
+        @include tablet {
+          height: 240px;
+        }
+
+        @include mobile {
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 10px;
+
+          height: 600px;
+        }
+
+        .beyond-card {
+          //---for Tech-Home---------from tech-card component
+          display: flex;
+          flex-direction: column;
+          overflow: hidden;
+
+          height: 320px;
+          width: 280px;
+          margin: 0px 15px 0px 0px;
+          background-color: rgba(154, 154, 154, 0.134);
+          backdrop-filter: blur(20px);
+          transition: all 0.3s ease;
+
+          @include tablet {
+            margin: 0px 12px 0px 0px;
+            width: 165px;
+            height: 230px;
+          }
+          @include mobile {
+            flex-direction: row;
+            height: 140px;
+            width: 100%;
+            display: flex;
+            margin: 0px 0px 5px 0px;
+            &:active {
+              text-decoration: underline;
+              color: orchid;
+            }
+          }
+
+          h2 {
+            text-align: left;
+            padding: 0px 5px;
+            height: 40%;
+            width: 100%;
+
+            font-size: 20px;
+
+            @include tablet {
+              font-size: 16px;
+              padding: 0px 1px;
+            }
+            @include mobile {
+              height: 100%;
+              width: 50%;
+              padding: 3px 5px;
+              font-size: 16px;
+            }
+          }
+
+          img {
+            height: 60%;
+            width: 100%;
+            @include tablet {
+              height: 40%;
+            }
+            @include mobile {
+              height: 100%;
+              width: 50%;
+            }
+          }
+
+          &:hover {
+            text-decoration: underline;
+            color: orchid;
+          }
+          &:active {
+            color: orchid;
+          }
+        }
+        .beyond-view-more-mobile {
+          display: none;
+          @include mobile {
+            display: flex;
+            justify-content: flex-end;
+            width: auto;
+            h2 {
+              font-size: 16px;
+              margin-bottom: 5px;
+              font-weight: 100;
+              padding: 0 10px;
+
+              &:active {
+                text-decoration: underline;
+              }
+              span {
+                font-size: 1em;
+                vertical-align: middle;
+                font-weight: 900;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
